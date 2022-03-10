@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply bg text;
+  }
+}
+
+@layer utilities {
+  .bg {
+    @apply dark:bg-neutral-900 bg-neutral-50;
+  }
+  .text {
+    @apply dark:text-neutral-50 text-neutral-900;
+  }
+}
