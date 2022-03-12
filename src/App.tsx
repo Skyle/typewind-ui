@@ -3,16 +3,19 @@ import Button from "./components/UI/Button";
 function App() {
   return (
     <div>
-      <header>
-        <h1 className="text-4xl font-extralight text-center py-4">
-          Typewind UI
-        </h1>
-        <h2 className="text-xl font-light text-center">
-          experimental UI lib for react, based on tailwindcss and Typescript
-        </h2>
+      <header className="text-center pb-8">
+        <h1 className="text-5xl font-extralight py-4">Typewind UI</h1>
+        <h2 className="text-xl font-light pb-2">React UI Component Library</h2>
+        <div className="font-light">
+          <ul className="">
+            <li>minimalistic styling with tailwindcss</li>
+            <li>build with Typescript</li>
+          </ul>
+        </div>
       </header>
-      <main>
+      <main className="px-2 flex space-x-2">
         <Button></Button>
+        <Button color="green"></Button>
       </main>
     </div>
   );
