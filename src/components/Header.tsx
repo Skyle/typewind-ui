@@ -12,8 +12,8 @@ function Header({}: Props) {
 
       <div className="font-light">
         <ul className="">
-          <li>minimalistic styling with tailwindcss</li>
-          <li>build with Typescript</li>
+          <li>minimal styling with tailwindcss</li>
+          <li>fully typed</li>
         </ul>
       </div>
     </header>

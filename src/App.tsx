@@ -15,7 +15,7 @@ function App() {
     <div>
       <Header></Header>
       <main className="px-2 grid gap-8 justify-items-center">
-        <div>
+        <div className="md:pt-6">
           <ButtonSection></ButtonSection>
         </div>
         <div>
