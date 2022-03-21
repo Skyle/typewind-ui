@@ -3,7 +3,7 @@ import React, { useRef, useState } from "react";
 type Props = {
   name: string;
   value: string | number | readonly string[] | undefined;
-  onChange: React.ChangeEventHandler<HTMLInputElement> | undefined;
+  onChange: React.ChangeEventHandler<HTMLInputElement>;
   color?: string;
   placeholder?: string;
   type?: React.HTMLInputTypeAttribute;
@@ -51,7 +51,7 @@ function Input({
         <div>
           <input
             onChange={(e) => {
-              if (onChange) onChange(e);
+              onChange(e);
             }}
             onFocus={(e) => {
               setfocus(true);

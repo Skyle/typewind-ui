@@ -1,25 +1,29 @@
 import React, { useEffect, useState } from "react";
 
 type Props = {
-  children?: React.ReactChildren;
+  children?: React.ReactChildren | string;
   onClick?: React.MouseEventHandler;
   color?: string;
+  loading?: boolean;
 };
 
-function Button({ children, onClick, color }: Props) {
+function Button({
+  children,
+  onClick,
+  color = "neutral",
+  loading = false,
+}: Props) {
   return (
     <button
+      disabled={loading}
       className={
-        "button-base" +
-        (color === "green" ? " border-green bg-green" : "") +
-        (color === "red" ? " border-red bg-red" : "") +
-        (color === undefined ? " border-neutral bg-neutral" : "")
+        "m-1 rounded px-4 py-1 bg-neutral-50 text-neutral-900 leading-relaxed border-2 border-neutral-500 hover:border-neutral-600"
       }
       onClick={(e) => {
         if (onClick) onClick(e);
       }}
     >
-      {children ? children : "Button"}
+      {loading ? "Lädt..." : children ? children : "Button"}
     </button>
   );
 }
