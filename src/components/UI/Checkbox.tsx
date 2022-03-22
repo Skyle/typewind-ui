@@ -8,7 +8,7 @@ type Props = {
 
 function Checkbox({ checked, label, onChange }: Props) {
   return (
-    <label className="m-1 cursor-pointer select-none text-neutral-900">
+    <label className="m-1 cursor-pointer select-none">
       <input
         className="cursor-pointer"
         type="checkbox"

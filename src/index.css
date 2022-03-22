@@ -19,6 +19,10 @@
     @apply dark:bg-neutral-900 bg-neutral-50;
   }
 
+  .text {
+    @apply dark:text-neutral-50 text-neutral-900;
+  }
+
   .border-green {
     @apply border-green-700 hover:border-green-600 focus:border-green-600 active:border-green-500 active:ring-green-500 active:ring-opacity-30 active:ring-1 dark:border-green-600 dark:hover:border-green-700 dark:focus:border-green-700 dark:active:border-green-800 dark:active:ring-green-600 dark:active:ring-opacity-30 dark:active:ring-1;
   }
@@ -41,9 +45,5 @@
 
   .bg-neutral {
     @apply active:bg-neutral-500 active:bg-opacity-20 focus:bg-neutral-500 focus:bg-opacity-10 dark:active:bg-neutral-700 dark:active:bg-opacity-20 dark:focus:bg-neutral-700 dark:focus:bg-opacity-10;
-  }
-
-  .text {
-    @apply dark:text-neutral-50 text-neutral-900;
   }
 }

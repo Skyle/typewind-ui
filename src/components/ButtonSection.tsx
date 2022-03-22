@@ -61,6 +61,12 @@ function ButtonSection({}: Props) {
               Nicht Klicken
             </Button>
           </div>
+          <div className="font-extralight">
+            {clickCounter !== 0 && clickCounter !== 1 && (
+              <div>{clickCounter} Klicks</div>
+            )}
+            {clickCounter === 1 && <div>Dein erster Klick!</div>}
+          </div>
         </div>
         <div className="">
           <div className="font-light">
@@ -68,29 +74,25 @@ function ButtonSection({}: Props) {
             <code className="inline">disabled=true</code> und einer Farbe für
             gefährliche Aktionen.
           </div>
-          <div>
-            <Checkbox
-              label="shadow"
-              onChange={(e) => {
-                setShadow(e.target.checked);
-              }}
-              checked={shadow}
-            ></Checkbox>
-          </div>
-          <div>
-            <Checkbox
-              label="disabled"
-              onChange={(e) => {
-                setGlobalDisable(e.target.checked);
-              }}
-              checked={globalDisable}
-            ></Checkbox>
-          </div>
-          <div className="font-extralight">
-            {clickCounter !== 0 && clickCounter !== 1 && (
-              <div>{clickCounter} Klicks</div>
-            )}
-            {clickCounter === 1 && <div>Dein erster Klick!</div>}
+          <div className="pt-4">
+            <div>
+              <Checkbox
+                label="shadow"
+                onChange={(e) => {
+                  setShadow(e.target.checked);
+                }}
+                checked={shadow}
+              ></Checkbox>
+            </div>
+            <div>
+              <Checkbox
+                label="all disabled"
+                onChange={(e) => {
+                  setGlobalDisable(e.target.checked);
+                }}
+                checked={globalDisable}
+              ></Checkbox>
+            </div>
           </div>
         </div>
       </div>
