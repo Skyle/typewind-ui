@@ -13,17 +13,23 @@ function MenuSection({}: Props) {
   ]);
   const [selectedItem, setSelectedItem] = useState(items[0]);
   return (
-    <section className="">
-      <h3 className="w-full pb-2">Menu</h3>
-      <div className="flex flex-wrap space-x-2">
-        <Menu
-          items={items}
-          name="Menu"
-          value={selectedItem}
-          onChange={(value: any) => {
-            setSelectedItem(value);
-          }}
-        ></Menu>
+    <section className="md:flex justify-center md:space-x-4">
+      <div className="pb-4 md:pb-0">
+        <h3 className=" pb-2 text-xl">Menu</h3>
+        <div className="flex flex-wrap space-x-2">
+          <Menu
+            items={items}
+            name="Menu"
+            value={selectedItem}
+            onChange={(value: any) => {
+              setSelectedItem(value);
+            }}
+          ></Menu>
+        </div>
+      </div>
+      <div className="font-light pt-4 md:p-10 max-w-sm">
+        Menus nehmen ein Array aus Items an und geben bei Veränderung das
+        ausgewählt Item zurück.
       </div>
     </section>
   );

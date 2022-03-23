@@ -17,7 +17,7 @@ function Checkbox({ checked, label, onChange }: Props) {
         }}
         checked={checked}
       ></input>
-      <span className="ml-1"> {label}</span>
+      <span className="ml-1 font-light"> {label}</span>
     </label>
   );
 }

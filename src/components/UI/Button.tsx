@@ -21,7 +21,7 @@ function Button({
     <button
       disabled={disabled}
       className={
-        "m-1 rounded px-4 py-1 shadow-sm dark:shadow-none active:ring-1 focus:ring-1 bg-neutral-50 dark:bg-neutral-900 leading-relaxed border focus:ring-opacity-40 active:ring-opacity-50 dark:focus:ring-opacity-40 dark:active:ring-opacity-50" +
+        "m-1 rounded px-4 py-1 shadow-sm dark:shadow-none active:ring-1 focus:ring-1 bg-inherit dark:bg-inherit leading-relaxed border focus:ring-opacity-40 active:ring-opacity-50 dark:focus:ring-opacity-40 dark:active:ring-opacity-50" +
         (disabled === true
           ? " shadow-none border-neutral-300 dark:border-neutral-700 hover:border-neutral-300 dark:hover:border-neutral-700 active:border-neutral-300 dark:active:border-neutral-700   focus:outline-none text-neutral-500 dark:text-neutral-600 cursor-wait"
           : "") +
