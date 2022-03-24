@@ -6,7 +6,7 @@ type Props = {};
 function InputSection({}: Props) {
   const [inputtext, setinputtext] = useState("");
   const [password, setpassword] = useState("");
-  const [alter, setalter] = useState("");
+  const [alter, setalter] = useState<string | number>("");
   return (
     <section className="md:flex justify-center md:space-x-4">
       <div>
@@ -38,7 +38,7 @@ function InputSection({}: Props) {
             <Input
               value={alter}
               onChange={(e) => {
-                setalter(e.target.value);
+                setalter(parseInt(e.target.value));
               }}
               type="number"
               placeholder="Alter"

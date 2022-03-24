@@ -23,7 +23,7 @@ function App() {
           <ListSection></ListSection>
         </div>
         <div>
-          <a href="https://github.com/Skyle/typewind-ui">
+          <a href="https://github.com/Skyle/typewind-ui" target="_blank">
             <img src={gh} height={64} width={64} alt="" />
           </a>
         </div>
