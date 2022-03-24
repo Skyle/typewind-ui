@@ -85,6 +85,14 @@ function ListSection({}: Props) {
           >
             Liste Erneuern
           </Button>
+          <Button
+            color="red"
+            onClick={() => {
+              setList([]);
+            }}
+          >
+            Alle Items löschen
+          </Button>
         </div>
       </Card>
     </div>

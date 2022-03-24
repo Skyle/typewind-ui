@@ -12,6 +12,7 @@ function MenuSection({}: Props) {
     { value: "vanilla", text: "Pure DOM" },
   ]);
   const [selectedItem, setSelectedItem] = useState(items[0]);
+  const [selectedfuse, setSelectedfuse] = useState(false);
   return (
     <section className="md:flex justify-center md:space-x-4">
       <div className="pb-4 md:pb-0">
@@ -22,6 +23,7 @@ function MenuSection({}: Props) {
             name="Menu"
             value={selectedItem}
             onChange={(value: any) => {
+              setSelectedfuse(true);
               setSelectedItem(value);
             }}
           ></Menu>
@@ -30,6 +32,9 @@ function MenuSection({}: Props) {
       <div className="font-light md:p-10 max-w-sm">
         Menus nehmen ein Array aus Items an und geben bei Veränderung das
         ausgewählt Item zurück.
+        {selectedfuse && (
+          <div className="pt-2">{JSON.stringify(selectedItem)}</div>
+        )}
       </div>
     </section>
   );
