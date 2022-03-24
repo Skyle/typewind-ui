@@ -2,12 +2,12 @@ import React from "react";
 
 type Props = {
   name: string;
-  value: Item;
-  onChange: (item: Item) => void;
-  items: Item[];
+  value: MenuItem;
+  onChange: (item: MenuItem) => void;
+  items: MenuItem[];
 };
 
-export type Item = {
+export type MenuItem = {
   value: string;
   text: string;
 };

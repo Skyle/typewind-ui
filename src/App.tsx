@@ -1,6 +1,7 @@
 import ButtonSection from "./components/ButtonSection";
 import Header from "./components/Header";
 import InputSection from "./components/InputSection";
+import ListSection from "./components/ListSection";
 import MenuSection from "./components/MenuSection";
 
 function App() {
@@ -16,6 +17,9 @@ function App() {
         </div>
         <div>
           <MenuSection></MenuSection>
+        </div>
+        <div>
+          <ListSection></ListSection>
         </div>
       </main>
     </div>
