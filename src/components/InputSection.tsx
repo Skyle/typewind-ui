@@ -50,6 +50,15 @@ function InputSection({}: Props) {
       <div className="font-light max-w-sm pt-4 md:p-10">
         Eingabefelder können in Forms eingebunden werden und schwenken ihren
         Placeholder bei Eingabe aus dem Weg.
+        {(inputtext !== "" || password !== "" || alter !== "") && (
+          <div className="pt-2">
+            {JSON.stringify({
+              text: inputtext,
+              password: password,
+              number: alter,
+            })}
+          </div>
+        )}
       </div>
     </section>
   );

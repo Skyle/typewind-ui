@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import Menu, { Item } from "./UI/Menu";
+import Menu, { MenuItem } from "./UI/Menu";
 
 type Props = {};
 
 function MenuSection({}: Props) {
-  const [items] = useState<Item[]>([
+  const [items] = useState<MenuItem[]>([
     { value: "react", text: "React" },
     { value: "vue", text: "Vue" },
     { value: "angular", text: "Angular" },
@@ -27,7 +27,7 @@ function MenuSection({}: Props) {
           ></Menu>
         </div>
       </div>
-      <div className="font-light pt-4 md:p-10 max-w-sm">
+      <div className="font-light md:p-10 max-w-sm">
         Menus nehmen ein Array aus Items an und geben bei Veränderung das
         ausgewählt Item zurück.
       </div>

@@ -3,9 +3,8 @@ import React, { useEffect, useState } from "react";
 type Props = {
   children?: React.ReactChildren | string;
   onClick?: React.MouseEventHandler;
-  color?: string;
+  color?: "neutral" | "green" | "red" | "blue";
   disabled?: boolean;
-  fat?: boolean;
   shadow?: boolean;
 };
 
@@ -14,7 +13,6 @@ function Button({
   onClick,
   color = "neutral",
   disabled = false,
-  fat = false,
   shadow = true,
 }: Props) {
   return (
